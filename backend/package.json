@@ -1,0 +1,48 @@
+{
+  "name": "api-backend-dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Marcos Ap Silva",
+  "license": "MIT",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "postinstall": "prisma generate",
+    "build": "rimraf ./build && tsc",
+    "vercel-build": "npx prisma migrate deploy",
+    "dev": "nodemon",
+    "start": "node build/index.js",
+    "db:format": "prisma format",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "prisma db seed"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/express-serve-static-core": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^22.10.2",
+    "@types/nodemailer": "^6.4.17",
+    "nodemon": "^3.1.9",
+    "prisma": "^6.1.0",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.1.0",
+    "axios": "^1.7.9",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.16"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seeds.ts"
+  }
+}

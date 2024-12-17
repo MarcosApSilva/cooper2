@@ -1,0 +1,17 @@
+npm i -D @types/bcryptjs @types/cors @types/express @types/jsonwebtoken @types/node @types/nodemailer
+@types/express-serve-static-core
+
+/*
+//------------------------------------------------
+//  CORRIGINDO
+// Para corrigir o erro instalar express versao 4
+// pq na versao >=5 esta com erro
+//------------------------------------------------
+*/
+npm i -D @types/express@4
+
+npm i -D nodemon rimraf ts-node typescript prisma
+
+npm i @prisma/client axios bcryptjs cors dotenv express jsonwebtoken nodemailer
+
+npx prisma init
